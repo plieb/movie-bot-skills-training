@@ -1,0 +1,17 @@
+{
+  "name": "movie_bot",
+  "version": "1.0.0",
+  "description": "A backend for your weather bot on Recast.ai",
+  "main": "index.js",
+  "author": "nathan.grasset@recast.ai",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  }
+}
