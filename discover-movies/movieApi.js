@@ -42,11 +42,6 @@ function apiResultToCarousselle(results) {
         value: `https://www.themoviedb.org/movie/${e.id}`,
         title: 'View More',
       },
-      {
-        type: 'postback',
-        value: 'Hello my name is PE',
-        title: 'Say hello',
-      },
     ],
   }));
 
