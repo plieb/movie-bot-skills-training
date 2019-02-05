@@ -4,7 +4,7 @@ const { discoverMovie } = require('./movieApi');
 function loadMovieRoute(app) {
   app.post('/discover-movies', function(req, res) {
     console.log('[GET] /discover-movies');
-    const kind = req.body.conversation.memory['medium'].type;
+    const kind = req.body.conversation.memory['recording'].type;
 
     const genreId = req.body.conversation.memory['genre'].id;
 
