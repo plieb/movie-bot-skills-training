@@ -3,7 +3,7 @@ const config = require('../config');
 
 function discoverMovie(kind, genreId, language) {
   return moviedbApiCall(kind, genreId, language).then(response =>
-    apiResultToCarousselle(response.data.results)
+    apiResultToCarousselle(response.data.results, kind)
   );
 }
 
@@ -19,7 +19,7 @@ function moviedbApiCall(kind, genreId, language) {
   });
 }
 
-function apiResultToCarousselle(results) {
+function apiResultToCarousselle(results, kind) {
   if (results.length === 0) {
     return [
       {
@@ -39,7 +39,7 @@ function apiResultToCarousselle(results) {
     buttons: [
       {
         type: 'web_url',
-        value: `https://www.themoviedb.org/movie/${e.id}`,
+        value: `https://www.themoviedb.org/${kind}/${e.id}`,
         title: 'View More',
       },
     ],
